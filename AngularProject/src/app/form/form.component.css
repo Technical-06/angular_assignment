@@ -1,0 +1,35 @@
+button{
+        background-color: #a8af4c; 
+        border: none;
+        color: white;
+        margin-top: 10px;
+        text-align: center;
+        padding: 2% 5%;
+        text-decoration: none;
+        display: inline-block;
+        
+      }
+
+        
+      form{
+          text-align: center;
+      }
+      h1{
+          text-align: center;
+          color: green;
+          text-align: center;
+            font-size: 30px;
+            margin-top: 60px;
+      }
+
+
+ 
+input[type=button] {
+    margin-top: 10px;
+    text-align: center;
+
+}
+
+body{
+    background-color: lightseagreen;
+}

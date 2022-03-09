@@ -1,0 +1,41 @@
+<body>
+    <h1>{{ title }}</h1>
+    <form #saveForm="ngForm" (ngSubmit)="loginUser(saveForm.value)">
+        <div class=" mb-3">
+            <input type="text" required #name="ngModel" name="name" placeholder="enter name"
+                [(ngModel)]="empModel.name"><br>
+            <span *ngIf="name.invalid && name.touched" style="color:rgb(255, 0, 157)">Name is required
+            </span><br><br>
+        </div>
+        <div class="mb-3">
+            <input type="text" required #email="ngModel" email name="email" placeholder="enter email"
+                [(ngModel)]="empModel.email"><br>
+            <span *ngIf="email.invalid && email.touched" style="color:#0000ff">Please enter a valid email</span>
+            <br><br>
+        </div>
+        <div class="mb-3">
+            <input type="text" pattern="^\d{10}$" required #phoneno="ngModel" name="phoneno" minlength="10"
+                placeholder="enter phoneno" [(ngModel)]="empModel.phone"><br>
+            <span *ngIf="phoneno.invalid && phoneno.touched" style="color:rgb(255, 0, 13)">phoneno must be of 10
+                digits
+
+            </span>
+            <br><br>
+        </div>
+        <div class="mb-3">
+            <input type="text" required #address="ngModel" name="address" placeholder="enter address"
+                [(ngModel)]="empModel.address" l><br>
+            <span *ngIf="address.invalid && address.touched" style="color:brown">Please enter a valid
+                address</span><br><br>
+        </div>
+        <div class="mb-3">
+            <input type="date" required #dob="ngModel" name="dob" placeholder="mm/dd/yyyy"
+                [(ngModel)]="empModel.dob"><br>
+            <span *ngIf="dob.invalid && dob.touched" style="color:rgb(229, 255, 0)">Please enter your dob
+            </span><br><br>
+
+        </div>
+        <button [disabled]="saveForm.invalid">save</button>
+
+    </form>
+</body>
